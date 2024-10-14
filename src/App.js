@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './Components/Navbar/Navbar';
+import Kategori from './Components/Kategori/Kategori';
+import Connect from './Components/Connect/Connect';
+import Menu from './Components/Menu/Menu';  // Misalnya ini halaman menu yang akan menerima kategori
+import Login from './Components/Login/Login';
 
-function App() {
+const App = () => {
+  const [showLogin, setShowLogin] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      {showLogin ? <Login setShowLogin = {setShowLogin}/> : <></>}
+      <Navbar setShowLogin={setShowLogin} />
+      <Routes>
+        {/* Home route */}
+        <Route path="/" element={<Kategori />} />
+        <Route path="/menu/minuman-hangat" element={<Menu category="Minuman Hangat" />} />
+      </Routes>
+      <Connect />
+    </Router>
   );
-}
+};
 
 export default App;
