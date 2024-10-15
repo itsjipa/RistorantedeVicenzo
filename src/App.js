@@ -1,16 +1,21 @@
-import Home from "./home/home"
-import {BrowserRouter, Routes, Route} from "react-router-dom"
+import logo from './logo.svg';
+import './App.css';
 
-function App() {
+const App = () => {
+  const [showLogin, setShowLogin] = useState(false);
+
   return (
-    <>
-    <BrowserRouter>
+    <Router>
+      {showLogin ? <Login setShowLogin = {setShowLogin}/> : <></>}
+      <Navbar setShowLogin={setShowLogin} />
       <Routes>
-        <Route path="/" element={<Home />}></Route>
+        {/* Home route */}
+        <Route path="/" element={<Kategori />} />
+        <Route path="/menu/minuman-hangat" element={<Menu category="Minuman Hangat" />} />
       </Routes>
-    </BrowserRouter>
-    </>
+      <Connect />
+    </Router>
   );
-}
+};
 
 export default App;
