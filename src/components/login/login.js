@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import './Login.css';
-import cross from '../../assets/cross.png';
+import '../../styling/login.css';
+import {FaCross} from 'react-icons/fa'
+import { Button } from 'react-bootstrap';
 
 const Login = ({ setShowLogin }) => {
   const [currState, setCurrState] = useState("Login");
@@ -10,7 +11,9 @@ const Login = ({ setShowLogin }) => {
       <form className='login-container'>
         <div className='login-title'>
           <h2>{currState}</h2>
-          <img onClick={() => setShowLogin(false)} src={cross} alt="Close login form"/>
+          <Button onClick={() => setShowLogin(false)}>
+            <FaCross />
+          </Button>
         </div>
         <div className='login-inputs'>
           {currState === "Login" ? <></> : <input type='text' placeholder='Your Name' required />}
