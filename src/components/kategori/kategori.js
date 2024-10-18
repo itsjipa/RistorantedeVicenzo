@@ -1,12 +1,12 @@
 import React from 'react';
-import './Kategori.css';
+import '../../styling/kategori.css';
 import { useNavigate } from 'react-router-dom';
 import kategori_makanan1 from '../../assets/pembuka.png';
 import kategori_makanan2 from '../../assets/makanan_manis.png';
 import kategori_makanan3 from '../../assets/makanan_penutup.png';
 import kategori_minuman1 from '../../assets/minuman_sehat.png';
 import kategori_minuman2 from '../../assets/minuman_ringan.png';
-import kategori_minuman3 from '../../assets/minuman_hangat.png';
+import kategori_minuman3 from '../../assets/minuman_hangat (2).png';
 
 const Kategori = () => {
   const navigate = useNavigate();

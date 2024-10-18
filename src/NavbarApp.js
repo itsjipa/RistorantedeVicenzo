@@ -16,7 +16,7 @@ function NavbarApp() {
                     <FormControl type="search" placeholder='Search' className="me-2 rounded-input" aria-label="Search"/>
                 </Form>
                 <Nav>
-                    <Nav.Link href="cart" className="position-relative">
+                    <Nav.Link href="/cart" className="position-relative">
                         <FaShoppingCart className='cart-icon'/>
                         <span className="position-absolute top-5 start-100 translate-middle badge rounded-pill bg-danger">
                             3 

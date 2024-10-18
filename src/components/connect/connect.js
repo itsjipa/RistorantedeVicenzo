@@ -1,9 +1,8 @@
-import React from 'react'
-import './Connects.css'
-import icon_ig from '../../assets/Instagram.png';
-import icon_fb from '../../assets/Facebook.png';
-import icon_wa from '../../assets/Whatsapp.png';
-import icon_email from '../../assets/email.png';
+import React from 'react';
+import '../../styling/connect.css'
+import 'react-social-icons/facebook';
+import { FaInstagram, FaEnvelope} from 'react-icons/fa'
+import { FaFacebook, FaWhatsapp} from 'react-icons/fa6'
 
 
 const Connect = () => {
@@ -12,22 +11,22 @@ const Connect = () => {
         <div className='connect'><span>Connect Closer</span>
             <div className='icon'>
                 <div className='icon-instagram'>
-                <img src={icon_ig} alt='' className='icon-instagram'/>
+                <FaInstagram />
                 </div>
                 <div className='icon-facebook'>
-                <img src={icon_fb} alt='' className='icon-facebook'/>
+                <FaFacebook />
                 </div>
                 <div className='icon-whatsApp'>
-                <img src={icon_wa} alt='' className='icon-whatsApp'/>
+                <FaWhatsapp />
                 </div>
                 <div className='icon-email'>
-                <img src={icon_email} alt='' className='icon-email'/>
+                <FaEnvelope />
                 </div>
             </div>
         </div>
         {/* Tambahkan teks Terima Kasih di bawah Connect Closer */}
         <div className='thank-you'>
-            <p>Terima Kasih</p>
+            <p>Thank You</p>
         </div>
         {/* Tambahkan footer di bawah Connect Closer */}
         <div className='footer'>

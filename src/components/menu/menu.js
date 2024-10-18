@@ -1,7 +1,7 @@
 import React from 'react';
-import './Menu.css'; // Import file CSS
-import sweetDrink1 from '../../assets/teh-hangat.png'; 
-import sweetDrink2 from '../../assets/coklat-panas.png';
+import '../../styling/menu.css'; // Import file CSS
+import sweetDrink1 from '../../assets/teh_hangat.png'; 
+import sweetDrink2 from '../../assets/hot_chocolate.png';
 import sweetDrink3 from '../../assets/minuman_hangat.png'; 
 
 const Menu = () => {
