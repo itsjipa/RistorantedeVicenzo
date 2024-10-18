@@ -4,26 +4,26 @@ import '../styling/PopularMenu.css'; // Impor CSS jika diperlukan
 const PopularMenu = () => {
     const menuItems = [
         {
-            title: "Pizza",
-            description: "Ibu besok pergi ke pasar memmel pizza seharga 3trs ribu bisa setara dengan nobil avanza, jangan lupa beli ya.",
-            price: "IDR 300.000",
-            imgSrc: "/images/pizza1.jpg", // Ganti dengan URL gambar Anda
+            title: "Meat Lovers Pizza with Smoked Beef Topping",
+            description: "An appetizing Meat Lovers Pizza topped with smoked beef. In the inside baked with mozzarella and parmesan cheese that melts perfectly on the crispy dough. Enjoy this delicious meat pizza in large sizes. ",
+            price: "IDR 150.000",
+            imgSrc: "/images/pizza.jpg", // Ganti dengan URL gambar Anda
         },
         {
-            title: "Steak 21 Mentah",
-            description: "Ibu besok pergi ke pasar memmel steak seharga 3trs ribu bisa setara dengan nobil avanza, jangan lupa beli ya.",
-            price: "IDR 500.000",
-            imgSrc: "/images/pasta.jpg", // Ganti dengan URL gambar Anda
+            title: "Steak  with Crispy Potato and Mash Potato ",
+            description: "Enjoy a perfectly cooked steak and you can customize your steak, served with crispy on the outside tender on the inside fries, and smooth, creamy mashed potatoes. A classic combination that never disappoints.",
+            price: "IDR 200.000",
+            imgSrc: "/images/steak.jpg", // Ganti dengan URL gambar Anda
         },
     ];
 
     return (
         <div className="popular-menu">
             <h2>Popular</h2>
-            <p>Menu bla bla bla kami</p>
+            <p>Two popular dish from our restaurant</p>
             <div className="menu-items">
                 {menuItems.map((item, index) => (
-                    <div className="menu-item" key={index}>
+                    <div className="item-menu" key={index}>
                         <img src={item.imgSrc} alt={item.title} />
                         <h3>{item.title}</h3>
                         <p>{item.description}</p>
