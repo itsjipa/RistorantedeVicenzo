@@ -1,6 +1,6 @@
-FROM node
-WORKDIR /client
-COPY package.json /client
+FROM node:20-alpine
+WORKDIR /app
+COPY package.json /app
 RUN npm install -g http-server
-COPY . /client
+COPY . /app
 CMD ["http-server","-c", "-1"]
