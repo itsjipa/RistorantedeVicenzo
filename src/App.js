@@ -6,7 +6,7 @@ import Kategori from './components/kategori/kategori';
 import Connect from './components/connect/connect';
 import Menu from './components/menu/menu';  // Misalnya ini halaman menu yang akan menerima kategori
 import Login from './components/login/login';
-import CartItem from './cart/CartItem';
+import CartItem from './components/cart/CartItem';
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);

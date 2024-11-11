@@ -1,6 +1,5 @@
 import React from 'react';
 import '../../styling/connect.css'
-import 'react-social-icons/facebook';
 import { FaInstagram, FaEnvelope} from 'react-icons/fa'
 import { FaFacebook, FaWhatsapp} from 'react-icons/fa6'
 
