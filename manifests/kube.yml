@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: ristorante
-          image: desiana04/ristorante:1.0.4
+          image: desiana04/ristorante
           resources:
             requests:
               memory: "256Mi"
