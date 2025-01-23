@@ -34,9 +34,8 @@ spec:
   selector:
     app: ristorantedevicenzo
   ports:
-    - port: 8080
-      targetPort: 8080
-      nodePort: 30080 # Tambahkan jika ingin NodePort spesifik
+    - port: 80
+      targetPort: 80
 ---
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
