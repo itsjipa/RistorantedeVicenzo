@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: ristorantedevicenzo
-          image: itsjipa/ristorantedevicenzo
+          image: itsjipa/ristorantedevicenzo:main
           resources:
             requests:
               memory: "256Mi"
