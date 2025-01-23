@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ristorante
+  name: ristorantedevicenzo
   namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ristorante
+      app: ristorantedevicenzo
   template:
     metadata:
       labels:
-        app: ristorante
+        app: ristorantedevicenzo
     spec:
       containers:
-        - name: ristorante
-          image: desiana04/ristorante
+        - name: ristorantedevicenzo
+          image: itsjipa/ristorantedevicenzo
           resources:
             requests:
               memory: "256Mi"
@@ -29,12 +29,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: ristorante-service
+  name: ristorantedevicenzo-service
   namespace: default
 spec:
   type: NodePort
   selector:
-    app: ristorante
+    app: ristorantedevicenzo
   ports:
     - port: 8080
       targetPort: 8080
@@ -43,7 +43,7 @@ spec:
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: ristorante-hpa
+  name: ristorantedevicenzo-hpa
   namespace: default
 spec:
   minReplicas: 1
@@ -51,7 +51,7 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: ristorante
+    name: ristorantedevicenzo
   metrics:
     - type: Resource
       resource:
